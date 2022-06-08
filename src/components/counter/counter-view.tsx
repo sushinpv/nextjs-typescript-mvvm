@@ -8,7 +8,7 @@ const CounterView: React.FunctionComponent<ICounterViewProps> = ({ counter, onCl
   return (
     <div>
       <p>counter : {counter}</p>
-      <button onClick={onClick}>Click me</button>
+      <button onClick={onClick}>Click Me</button>
     </div>
   );
 };
