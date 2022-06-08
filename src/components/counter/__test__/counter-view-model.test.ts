@@ -1,5 +1,12 @@
-import * as Jest from "ts-jest";
+import { renderHook, act } from "@testing-library/react-hooks";
+import useCounterViewModel from "../counter-view-model";
 
-test("adds 1 + 2 to equal 3", () => {
-  expect(3).toBe(3);
+test("on Click of function the counter value should increase", () => {
+  const { result } = renderHook(() => useCounterViewModel({}));
+
+  act(() => {
+    result.current.onClick();
+  });
+
+  expect(result.current.counter).toBe(1);
 });
