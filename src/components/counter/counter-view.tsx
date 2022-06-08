@@ -12,7 +12,7 @@ const CounterView: React.FunctionComponent<ICounterViewProps> = ({ counter, onCl
     <div>
       <div style={{ backgroundColor: "#fafafa", padding: "2rem", marginTop: "2rem" }}>
         <p>counter : {counter}</p>
-        <button onClick={onClick}>Click Me</button>
+        <button data-testid="counter-click" onClick={onClick}>Click Me</button>
         <p>This is a MVVM component</p>
       </div>
       <Number number={counter} onClick={onClick} />
