@@ -1,4 +1,3 @@
-import * as React from "react";
 import MultiplierView from "./multiplier-view";
 import { useMultiplier } from "./multiplier-view-model";
 
