@@ -1,5 +1,8 @@
+import Multiplier from "../multiplier";
+import Number from "../number";
+
 interface ICounterViewProps {
-  counter: Number | String;
+  counter: number;
   onClick: any;
   type?: "A" | "B" | "C";
 }
@@ -7,8 +10,13 @@ interface ICounterViewProps {
 const CounterView: React.FunctionComponent<ICounterViewProps> = ({ counter, onClick }) => {
   return (
     <div>
-      <p>counter : {counter}</p>
-      <button onClick={onClick}>Click Me</button>
+      <div style={{ backgroundColor: "#fafafa", padding: "2rem", marginTop: "2rem" }}>
+        <p>counter : {counter}</p>
+        <button onClick={onClick}>Click Me</button>
+        <p>This is a MVVM component</p>
+      </div>
+      <Number number={counter} />
+      <Multiplier number={counter} />
     </div>
   );
 };
