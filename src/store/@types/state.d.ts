@@ -1,14 +1,14 @@
-type Entities = {
+interface Entities {
   address: Address;
-};
+}
 
-type UI = {
+interface UI {
   bugs: Bugs;
-};
+}
 
-type StateInstance = {
+interface StateInstance {
   entities: Entities;
   ui: UI;
-};
+}
 
 type getState = () => StateInstance;
