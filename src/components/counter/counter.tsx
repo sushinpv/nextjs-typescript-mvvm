@@ -3,9 +3,7 @@ import useCounterViewModel from "./counter-view-model";
 
 export interface ICounterProps {}
 
-type CounterFunc = (props: ICounterProps) => void;
-
-const Counter: CounterFunc = (props) => {
+const Counter: React.FunctionComponent<ICounterProps> = (props) => {
   const { counter, onClick } = useCounterViewModel({});
 
   return <CounterView counter={counter} onClick={onClick} type="A" />;
