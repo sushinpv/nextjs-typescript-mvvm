@@ -8,7 +8,7 @@ type CounterFunc = (props: ICounterProps) => void;
 const Counter: CounterFunc = (props) => {
   const { counter, onClick } = useCounterViewModel({});
 
-  return <CounterView counter={counter} onClick={onClick} type="C" />;
+  return <CounterView counter={counter} onClick={onClick} type="A" />;
 };
 
 export default Counter;

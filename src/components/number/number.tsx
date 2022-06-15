@@ -1,8 +1,10 @@
 import NumberView from "./number-view";
 
+type onClickFunc = () => {};
+
 interface INumberProps {
   number: number;
-  onClick: () => {};
+  onClick: onClickFunc;
 }
 
 const Number: React.FunctionComponent<INumberProps> = (props) => {
