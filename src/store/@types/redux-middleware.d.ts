@@ -1,4 +1,4 @@
 interface MiddlewareArgs {
   dispatch: Dispatch;
-  getState: any;
+  getState: getState;
 }

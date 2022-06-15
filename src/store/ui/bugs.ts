@@ -61,7 +61,7 @@ export default slice.reducer;
 
 //Action Creators
 
-export const loadBugs = () => (dispatch: Dispatch, getState: any) => {
+export const loadBugs = () => (dispatch: Dispatch, getState: getState) => {
   const { lastFetch } = getState().ui.bugs;
 
   const diffInMin = ((new Date().getTime() - lastFetch) % 60) * 1000;
@@ -78,7 +78,7 @@ export const loadBugs = () => (dispatch: Dispatch, getState: any) => {
   });
 };
 
-export const addBug = (bug: Bug) => (dispatch: Dispatch, getState: any) => {
+export const addBug = (bug: Bug) => (dispatch: Dispatch, getState: getState) => {
   dispatch({ type: bugAdded.type, payload: bug });
 };
 
@@ -86,6 +86,6 @@ export const addBug = (bug: Bug) => (dispatch: Dispatch, getState: any) => {
 
 export const getBugByUser = (userId: string) =>
   createSelector(
-    (state: any) => state.ui.bugs,
+    (state: StateInstance) => state.ui.bugs,
     (bugs) => bugs.list.filter((bug: Bug) => bug.userId === userId)
   );

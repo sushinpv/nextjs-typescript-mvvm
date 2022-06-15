@@ -98,7 +98,7 @@ export default slice.reducer;
  * @param getState
  * @returns
  */
-export const loadCountries = (dispatch: Dispatch, getState: any): any => {
+export const loadCountries = (dispatch: Dispatch, getState: getState): any => {
   const { list } = getState().entities.address.countries;
   if (list.length != 0) return;
 
@@ -120,7 +120,7 @@ export const loadCountries = (dispatch: Dispatch, getState: any): any => {
  */
 export const loadStates =
   (countryCode: string) =>
-  (dispatch: Dispatch, getState: any): any => {
+  (dispatch: Dispatch, getState: getState): any => {
     const { list } = getState().entities.address.states;
     if (list[countryCode]) return;
 
@@ -146,7 +146,7 @@ export const loadStates =
  */
 export const loadCities =
   (countryCode: string, stateCode: string) =>
-  (dispatch: Dispatch, getState: any): any => {
+  (dispatch: Dispatch, getState: getState): any => {
     const { list } = getState().entities.address.cities;
     if (list[countryCode + "-" + stateCode]) return;
 
@@ -169,7 +169,7 @@ export const loadCities =
 
 export const getCountries = () =>
   createSelector(
-    (state: any) => state.entities.address.countries,
+    (state: StateInstance) => state.entities.address.countries,
     (countries: Countries) => ({
       countriesList: countries.list,
       countriesLoaded: countries.loaded,
@@ -179,7 +179,7 @@ export const getCountries = () =>
 
 export const getStates = (countryCode: string) =>
   createSelector(
-    (state: any) => state.entities.address.states,
+    (state: StateInstance) => state.entities.address.states,
     (states: States) => ({
       statesList: states.list[countryCode] || [],
       statesLoaded: states.loaded,
@@ -189,7 +189,7 @@ export const getStates = (countryCode: string) =>
 
 export const getCities = (countryCode: string, stateCode: string) =>
   createSelector(
-    (state: any) => state.entities.address.cities,
+    (state: StateInstance) => state.entities.address.cities,
     (cities: Cities) => ({
       citiesList: cities.list[countryCode + "-" + stateCode] || [],
       citiesLoaded: cities.loaded,
