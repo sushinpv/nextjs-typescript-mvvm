@@ -1,1 +1,2 @@
-export { default as Multiplier } from "./multiplier";
+import Multiplier from "./multiplier";
+export default Multiplier;

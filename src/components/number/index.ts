@@ -1,1 +1,2 @@
-export { default as Number } from "./number";
+import Number from "./number";
+export default Number;
