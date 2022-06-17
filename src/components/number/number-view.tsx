@@ -1,8 +1,3 @@
-interface INumberViewProps {
-  number: number;
-  onClick: () => {};
-}
-
 const NumberView: React.FunctionComponent<INumberViewProps> = ({ number, onClick }) => {
   return (
     <div style={{ backgroundColor: "#fafafa", padding: "2rem", marginTop: "2rem" }}>

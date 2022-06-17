@@ -1,0 +1,3 @@
+interface IMultiplierControllerProps {
+  number: number;
+}

@@ -1,13 +1,3 @@
-interface ICounterViewProps {
-  counter: number;
-  onClick: any;
-  type?: "A" | "B" | "C";
-  components: {
-    Multiplier: React.FunctionComponent<any>;
-    Number: React.FunctionComponent<any>;
-  };
-}
-
 const CounterView: React.FunctionComponent<ICounterViewProps> = ({ counter, onClick, components: { Multiplier, Number } }) => {
   return (
     <div>
