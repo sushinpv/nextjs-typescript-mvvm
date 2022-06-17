@@ -3,7 +3,7 @@ interface ICounterViewProps {
   onClick: any;
   type?: "A" | "B" | "C";
   components: {
-    Multiplier: React.FunctionComponent<IMultiplierViewProps>;
-    Number: React.FunctionComponent<INumberViewProps>;
+    Multiplier: React.FunctionComponent<IMultiplierProps>;
+    Number: React.FunctionComponent<INumberProps>;
   };
 }

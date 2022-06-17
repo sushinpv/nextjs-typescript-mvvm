@@ -1,3 +1,6 @@
+interface IMultiplierProps {
+  number: number;
+}
 interface IMultiplierViewProps {
   total: Number;
   defaultValue: number;
