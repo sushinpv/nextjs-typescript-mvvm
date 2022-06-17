@@ -1,12 +1,14 @@
+import Multiplier from "../multiplier";
+import Number from "../number";
 import CounterView from "./counter-view";
-import useCounterViewModel from "./counter-view-model";
+import useCounterViewController from "./counter-view-controller";
 
 export interface ICounterProps {}
 
 const Counter: React.FunctionComponent<ICounterProps> = (props) => {
-  const { counter, onClick } = useCounterViewModel({});
+  const { counter, onClick } = useCounterViewController({});
 
-  return <CounterView counter={counter} onClick={onClick} type="A" />;
+  return <CounterView counter={counter} onClick={onClick} type="A" components={{ Number, Multiplier }} />;
 };
 
 export default Counter;

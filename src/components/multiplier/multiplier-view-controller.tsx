@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-export interface IMultiplierProps {
+export interface IMultiplierControllerProps {
   number: number;
 }
 
-export function useMultiplier(props: IMultiplierProps) {
+const useMultiplierController = (props: IMultiplierControllerProps) => {
   const total: number = props.number * 10;
   const [defaultValue, setDefaultValue] = useState(1);
 
@@ -13,4 +13,6 @@ export function useMultiplier(props: IMultiplierProps) {
   }, [props.number]);
 
   return { total, defaultValue };
-}
+};
+
+export default useMultiplierController;

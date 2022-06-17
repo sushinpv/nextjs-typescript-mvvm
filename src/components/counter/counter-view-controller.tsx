@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export interface ICounterViewModelProps {}
+export interface ICounterViewControllerProps {}
 
 /**
- * view model for counter
+ * View Controller for counter
  * @param props
  * @returns
  */
-const useCounterViewModel = (props: ICounterViewModelProps) => {
+const useCounterViewController = (props: ICounterViewControllerProps) => {
   const [counter, setCounter] = useState(0);
 
   /**
@@ -22,4 +22,4 @@ const useCounterViewModel = (props: ICounterViewModelProps) => {
     counter,
   };
 };
-export default useCounterViewModel;
+export default useCounterViewController;
