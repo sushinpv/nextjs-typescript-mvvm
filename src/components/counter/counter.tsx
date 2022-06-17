@@ -3,8 +3,6 @@ import Number from "../number";
 import CounterView from "./counter-view";
 import useCounterViewController from "./counter-view-controller";
 
-export interface ICounterProps {}
-
 const Counter: React.FunctionComponent<ICounterProps> = (props) => {
   const { counter, onClick } = useCounterViewController({});
 

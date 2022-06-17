@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-export interface ICounterViewControllerProps {}
-
 /**
  * View Controller for counter
  * @param props

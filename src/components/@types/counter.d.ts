@@ -1,3 +1,7 @@
+interface ICounterProps {}
+
+interface ICounterViewControllerProps {}
+
 interface ICounterViewProps {
   counter: number;
   onClick: any;
