@@ -1,8 +1,3 @@
-interface IMultiplierViewProps {
-  total: Number;
-  defaultValue: number;
-}
-
 const MultiplierView: React.FunctionComponent<IMultiplierViewProps> = (props) => {
   return (
     <div style={{ backgroundColor: "#fafafa", padding: "2rem", marginTop: "2rem" }}>
