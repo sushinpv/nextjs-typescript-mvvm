@@ -1,8 +1,8 @@
 import { renderHook, act } from "@testing-library/react-hooks";
-import useCounterViewModel from "../counter-view-controller";
+import useCounterViewController from "../counter-view-controller";
 
 test("on Click of function the counter value should increase", () => {
-  const { result } = renderHook(() => useCounterViewModel({}));
+  const { result } = renderHook(() => useCounterViewController({}));
 
   act(() => {
     result.current.onClick();
